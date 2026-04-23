@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praktikum 1 - Token Classifier</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>Token Classifier</h1>
+
+    </section>
+
+    <div class="layout">
+      <section class="panel">
+        <div class="section-title">
+          <h2>Input Program</h2>
+          <span class="muted">Input code lalu klik Analisis</span>
+        </div>
+
+        <textarea id="sourceCode" placeholder="Contoh:
+int luas(int p, int l) {
+    int hasil = p * l;
+    if (hasil > 100) {
+        hasil = hasil + 10;
+    }
+    return hasil;
+}"></textarea>
+
+        <div class="controls">
+          <div>
+            <label for="languageMode" class="muted">Mode bahasa</label>
+            <select id="languageMode">
+              <option value="auto" selected>Auto Detect</option>
+              <option value="c">C / C++</option>
+              <option value="java">Java</option>
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="custom">Custom</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="actions">
+          <button class="primary" id="analyzeBtn">Analisis Token</button>
+          <button class="secondary" id="exampleBtn">Contoh</button>
+          <button class="ghost" id="clearBtn">Clear</button>
+          <button class="ghost" id="exportBtn">Ekspor JSON</button>
+        </div>
+
+        <div class="stats" id="stats">
+          <div class="stat"><span class="label">Total token</span><strong>0</strong></div>
+          <div class="stat"><span class="label">Reserve words</span><strong>0</strong></div>
+          <div class="stat"><span class="label">Simbol & tanda baca</span><strong>0</strong></div>
+          <div class="stat"><span class="label">Variabel</span><strong>0</strong></div>
+        </div>
+
+
+      </section>
+
+      <section class="panel">
+
+        <div class="group-grid">
+          <div class="group-card">
+            <h3>Reserve Words</h3>
+            <div id="keywordsGroup" class="list"></div>
+          </div>
+          <div class="group-card">
+            <h3>Simbol dan Tanda Baca</h3>
+            <div id="symbolsGroup" class="list"></div>
+          </div>
+          <div class="group-card">
+            <h3>Variabel</h3>
+            <div id="variablesGroup" class="list"></div>
+          </div>
+          <div class="group-card">
+            <h3>Kalimat Matematika</h3>
+            <div id="mathGroup" class="math-list"></div>
+          </div>
+        </div>
+
+        <div class="chips" id="insightChips"></div>
+      </section>
+    </div>
+
+    <section class="panel" style="margin-top: 20px;">
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Token</th>
+              <th>Tipe Lexer</th>
+              <th>Kategori Tugas</th>
+              <th>Baris</th>
+              <th>Kolom</th>
+            </tr>
+          </thead>
+          <tbody id="tokenTableBody">
+            <tr><td colspan="6" class="muted">Belum ada data</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  
+    <script src="script.js"></script>
+
+</body>
+</html>
