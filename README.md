@@ -1,1 +1,1 @@
-# praktikum-otomata-1
+# praktikum-otomata
