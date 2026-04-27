@@ -1,4 +1,4 @@
-# Praktikum Otomata 1
+# Praktikum Otomata 1 dan 2
 
 ## Identitas
 | Nama | Kelas | NRP |
@@ -12,5 +12,5 @@
 
 
 ## Resources Pengerjaan
-[Praktikum 1](/Praktikum%201/)
-[Praktikum 2](/Praktikum%202/)
+- [Praktikum 1](/Praktikum%201/)    
+- [Praktikum 2](/Praktikum%202/)
