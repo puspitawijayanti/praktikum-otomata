@@ -14,3 +14,4 @@
 ## Resources Pengerjaan
 - [Praktikum 1](/Praktikum%201/)    
 - [Praktikum 2](/Praktikum%202/)
+- [Tugas Praktikum PPT 6](/Tugas%20Praktikum/)
